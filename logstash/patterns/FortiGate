@@ -1,0 +1,2 @@
+FG_DATE %{YEAR}-%{MONTHNUM}-%{MONTHDAY}
+FG_LogType traffic|event|content archive|virus|webfilter|ids|emailfilter|im|viop|

@@ -1,1 +1,7 @@
 .vagrant/
+.archive/
+vendor/
+data
+*.crt
+*.csr
+*.key

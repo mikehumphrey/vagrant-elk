@@ -1,0 +1,3 @@
+osi_line (\[%{NUMBER:line}\])
+osi_class (\[%{DATA:class}\]+)
+osi_classlog (?:%{osi_class}%{osi_line}:)
