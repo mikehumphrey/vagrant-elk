@@ -37,15 +37,18 @@ sudo dpkg -i logstash_1.4.2-1-2c0f5a1_all.deb
 sudo dpkg -i logstash-contrib_1.4.2-1-efd53ef_all.deb
 sudo rmdir /etc/logstash/conf.d
 sudo ln -s /vagrant/logstash/conf.d /etc/logstash/
-sudo ln -s /vagrant/logstash/log /var/log/lgostash 
+sudo ln -s /vagrant/logstash/log /var/log/lgostash
 
 # install Elasticsearch
-if [ ! -f elasticsearch-1.3.1.deb ]; then
-    echo "Downloading Elasticsearch 1.3.1"
-    wget -q --no-check-certificate https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.1.deb
+if [ ! -f elasticsearch-1.3.4.deb ]; then
+    echo "Downloading Elasticsearch 1.3.4"
+    wget -q --no-check-certificate https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.4.deb
 fi
-sudo dpkg -i elasticsearch-1.3.1.deb
+sudo dpkg -i elasticsearch-1.3.4.deb
 sudo update-rc.d elasticsearch defaults 95 10
+sudo rm /etc/elasticsearch/logging.yml && rm /etc/elasticsearch/elasticsearch.ym
+sudo ln -s /vagrant/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+sudo ln -s /vagrant/elasticsearch/logging.yml /etc/elasticsearch/logging.yml
 
 # install Elasticsearch Pugins
 sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
@@ -61,14 +64,14 @@ if [ ! -f kibana-3.1.0.tar.gz]; then
 fi
 #
 # tar -zxv kibana-3.1.0.tar.gz
-sudo cp -Rf /vagrant/vendor/kibana-3.1.0/* /usr/share/nginx/html/
+sudo cp -Rf /vagrant/vendor/kibana-3.1.1/* /usr/share/nginx/html/
 sudo rm /usr/share/nginx/html/config.js
 sudo cp /vagrant/kibana/kibana_config.js /usr/share/nginx/html/config.js
-cd /var/www
-tar zxf /vagrant/kibana-3.0.1.tar.gz
-mv kibana-3.0.1/* .
-rmdir kibana-3.0.1
-cd /var/www/app/dashboards
+cd /usr/share/nginx/html
+tar zxf /vagrant/kibana-3.1.1.tar.gz
+mv kibana-3.1.1/* .
+rmdir kibana-3.1.1
+cd /usr/share/nginx/html/app/dashboards
 cp -pf logstash.json default.json
 
 # install Logstash
