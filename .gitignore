@@ -1,15 +1,12 @@
 .vagrant/
 .archive/
 vendor/
-data/*
+data/OSI/
 *.crt
 *.csr
 *.key
-logstash/log/*
-logstash/log/logstash.log
-logstash/log/logstash.log
+logstash/log/
 
 .idea/
 dependency-reduced-pom.xml
 target/
-

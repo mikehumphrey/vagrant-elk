@@ -9,3 +9,8 @@ Simple Vagrant box with an ELK stack for testing purposes:
    * HQ http://www.elastichq.org/
    * Elasticsearch Head  http://mobz.github.io/elasticsearch-head/
    * Big Desk  http://bigdesk.org/
+
+To Get Started try one of the following:
+  1. Send Syslog logs via TCP or UDP to the IP of this VM at port 5000.
+  2. Place your log files into the data/syslog directory and Logstash will
+      import any log file placed there.  
