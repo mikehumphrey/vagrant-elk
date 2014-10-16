@@ -1,10 +1,12 @@
 .vagrant/
 .archive/
 vendor/
-data
+data/*
 *.crt
 *.csr
 *.key
 logstash/log/*
 logstash/log/logstash.log
 logstash/log/logstash.log
+
+bootstrap2.sh
