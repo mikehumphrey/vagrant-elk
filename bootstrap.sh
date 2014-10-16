@@ -54,7 +54,6 @@ sudo /usr/share/elasticsearch/bin/plugin -i karmi/elasticsearch-paramedic
 sudo /usr/share/elasticsearch/bin/plugin -i mobz/elasticsearch-head
 
 # install Kibana
-<<<<<<< HEAD
 cd /vagrant/vendor
 if [ ! -f kibana-3.1.0.tar.gz]; then
     echo "Downloading Kibana 3.1.0"
@@ -65,7 +64,6 @@ fi
 sudo cp -Rf /vagrant/vendor/kibana-3.1.0/* /usr/share/nginx/html/
 sudo rm /usr/share/nginx/html/config.js
 sudo cp /vagrant/kibana/kibana_config.js /usr/share/nginx/html/config.js
-=======
 cd /var/www
 tar zxf /vagrant/kibana-3.0.1.tar.gz
 mv kibana-3.0.1/* .
@@ -77,7 +75,6 @@ cp -pf logstash.json default.json
 cd /opt
 tar zxf /vagrant/logstash-1.4.1.tar.gz
 ln -sf logstash-1.4.1 logstash
->>>>>>> FETCH_HEAD
 
 # fix permissions
 chown -R vagrant.vagrant /opt/logstash*
