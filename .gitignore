@@ -10,3 +10,5 @@ logstash/log/
 .idea/
 dependency-reduced-pom.xml
 target/
+
+*.log
