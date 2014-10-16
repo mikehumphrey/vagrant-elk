@@ -37,7 +37,7 @@ sudo dpkg -i logstash_1.4.2-1-2c0f5a1_all.deb
 sudo dpkg -i logstash-contrib_1.4.2-1-efd53ef_all.deb
 sudo rmdir /etc/logstash/conf.d
 sudo ln -s /vagrant/logstash/conf.d /etc/logstash/
-sudo ln -s /vagrant/logstash/log /var/log/lgostash 
+sudo ln -s /vagrant/logstash/log /var/log/lgostash
 
 # install Elasticsearch
 if [ ! -f elasticsearch-1.3.1.deb ]; then

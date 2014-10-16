@@ -9,4 +9,7 @@ logstash/log/*
 logstash/log/logstash.log
 logstash/log/logstash.log
 
-bootstrap2.sh
+.idea/
+dependency-reduced-pom.xml
+target/
+
