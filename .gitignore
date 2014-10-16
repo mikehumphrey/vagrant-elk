@@ -5,3 +5,6 @@ data
 *.crt
 *.csr
 *.key
+logstash/log/*
+logstash/log/logstash.log
+logstash/log/logstash.log
