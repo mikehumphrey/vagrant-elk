@@ -160,7 +160,7 @@ path.conf: /vagrant/elasticsearch/
 
 # Path to log files:
 #
-path.logs: /vagrant/elasticsearch/logs
+path.logs: /vagrant/elasticsearch/log
 
 # Path to where plugins are installed:
 #
@@ -382,4 +382,4 @@ path.logs: /vagrant/elasticsearch/logs
 # http server. With this enabled, it may pose a security risk, so disabling
 # it unless you need it is recommended.
 #
-http.jsonp.enable: false
+# http.jsonp.enable: false
