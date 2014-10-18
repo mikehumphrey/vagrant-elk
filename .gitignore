@@ -6,6 +6,6 @@ data/OSI/
 *.crt
 *.csr
 *.key
-*.log
+*.log*
 *.stdout
 *.err
